@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Binary converter</title>
+  </head>
+  <body class="root">
+    <main class="content">
+      <h1 class="title">Я конвертeр систем счисления</h1>
+      <div class="container">
+        <div class="main-paragraph">
+          Я знаю, что
+          <span class="btn-container">
+            <button
+              class="btn btn-from btn-from-bin active-from"
+              value="binary"
+            >
+              двоичное</button
+            ><button class="btn btn-from btn-from-oct" value="octal">
+              восьмеричное</button
+            ><button class="btn btn-from btn-from-dec" value="decimal">
+              десятичное</button
+            ><button class="btn btn-from btn-from-hex" value="hexadecimal">
+              шестнадцатеричное
+            </button>
+          </span>
+          число
+          <form class="input-container">
+            <input
+              class="number-input"
+              type="text"
+              placeholder="101000010"
+              value="101000010"
+              minlength="1"
+              maxlength="12"
+              required
+              size="12"
+              onkeydown="size=value.length||12"
+              onkeyup="onkeydown()"
+              onkeypress="onkeydown()"
+              onchange="onkeydown()"
+            /><span class="error"></span>
+          </form>
+          в
+          <span class="btn-container">
+            <button class="btn btn-to btn-to-bin" value="binary">
+              двоичной</button
+            ><button class="btn btn-to btn-to-oct" value="octal">
+              восьмеричной</button
+            ><button class="btn btn-to btn-to-dec active-to" value="decimal">
+              десятичной</button
+            ><button class="btn btn-to btn-to-hex" value="hexadecimal">
+              шестнадцатеричной
+            </button>
+          </span>
+          системе счисления будет
+          <span class="convert-result">322</span>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <span class="footer__year">2023</span>
+      <p class="footer__text">
+        Сделал
+        <a
+          class="link"
+          href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+          target="_blank"
+          >Федя</a
+        >, нарисовал
+        <a class="link" href="https://mafrens.ru/" target="_blank">Мартин</a>
+      </p>
+    </footer>
+    <script src="index.js"></script>
+  </body>
+</html>
