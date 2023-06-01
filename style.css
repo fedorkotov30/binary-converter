@@ -38,6 +38,8 @@
   font-size: 25px;
   line-height: 100%;
   color: #000000;
+  padding: 7px 17px;
+  padding-right: 0px;
 }
 
 .number-input:placeholder-shown {
@@ -47,6 +49,7 @@
   font-size: 25px;
   line-height: 100%;
   color: #000000;
+  min-width: 135px;
 }
 
 .main-paragraph {
@@ -77,7 +80,7 @@
   padding: 7px 17px;
   border: none;
   cursor: pointer;
-  transition: all 1.3s;
+  transition: all 0.3s;
   margin-right: 5px;
 }
 
@@ -113,15 +116,18 @@
   line-height: 100%;
   color: #000000;
   background-color: white;
-  padding: 2px;
+  padding: 7px 17px;
 }
 
 .footer {
   display: flex;
   align-items: center;
   gap: 20px;
-
   border-top: 1px solid;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  max-width: 1280px;
 }
 
 .link {
@@ -153,4 +159,11 @@
   border: 1px solid #ff0000;
   color: #ff0000;
   margin-right: 5px;
+}
+
+@media screen and (max-width: 1310px) {
+  .root {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }

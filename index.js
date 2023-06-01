@@ -122,14 +122,14 @@ function convert() {
     : (res = Number(input.value));
   console.log(res);
   const answer = obj[activeBtnFrom[0].value][activeBtnTo[0].value](res);
-  return answer;
+  return validSystemFrom() ? "..." : answer;
 }
 
 function validSystemFrom() {
-  let bin = input.value.match(/[2-9A-Z]/gi);
-  let oct = input.value.match(/[8-9A-Z]/gi);
-  let dec = input.value.match(/[A-Z]/gi);
-  let hex = input.value.match(/[G-Z]/gi);
+  let bin = input.value.match(/[2-9A-ZА-Я]/gi);
+  let oct = input.value.match(/[8-9A-ZА-Я]/gi);
+  let dec = input.value.match(/[A-ZА-Я]/gi);
+  let hex = input.value.match(/[G-ZА-Я]/gi);
   if (activeBtnFrom[0].value === "binary") {
     console.log(bin);
     return Boolean(bin);
@@ -177,7 +177,7 @@ const isValid = () => {
 formInput.addEventListener("input", isValid);
 
 input.addEventListener("keyup", () => {
-  console.log("input change");
+  isValid();
   result.textContent = convert();
 });
 
