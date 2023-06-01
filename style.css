@@ -6,10 +6,16 @@
   width: 100%;
   max-width: 1280px;
   font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
 }
-
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 .content {
-  min-height: calc(100vh - 80px);
+  flex: 1 0 auto;
+  height: calc(100vh - 60px);
 }
 
 .title {
@@ -38,7 +44,7 @@
   font-size: 25px;
   line-height: 100%;
   color: #000000;
-  padding: 7px 17px;
+  padding: 3px 17px;
   padding-right: 0px;
 }
 
@@ -116,7 +122,7 @@
   line-height: 100%;
   color: #000000;
   background-color: white;
-  padding: 7px 17px;
+  padding: 3px 17px;
 }
 
 .footer {
@@ -124,9 +130,7 @@
   align-items: center;
   gap: 20px;
   border-top: 1px solid;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+  flex: 0 0 auto;
   max-width: 1280px;
 }
 
