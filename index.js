@@ -126,10 +126,10 @@ function convert() {
 }
 
 function validSystemFrom() {
-  let bin = input.value.match(/[2-9A-ZА-Я]/gi);
-  let oct = input.value.match(/[8-9A-ZА-Я]/gi);
-  let dec = input.value.match(/[A-ZА-Я]/gi);
-  let hex = input.value.match(/[G-ZА-Я]/gi);
+  let bin = input.value.match(/[^0-1]/gi);
+  let oct = input.value.match(/[^0-7]/gi);
+  let dec = input.value.match(/[^0-9]/gi);
+  let hex = input.value.match(/[^0-9A-F]/gi);
   if (activeBtnFrom[0].value === "binary") {
     console.log(bin);
     return Boolean(bin);
